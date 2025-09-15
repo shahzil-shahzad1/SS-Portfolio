@@ -1,5 +1,6 @@
 import React from 'react'
 import { skills } from '@/lib/data';
+import Image from "next/image";
 const SkillsPage = () => {
   return (
     <section
@@ -25,7 +26,7 @@ const SkillsPage = () => {
                     className="flex flex-col items-center text-center"
                   >
                     <div className="w-16 h-16 flex items-center justify-center bg-[#111] border border-gray-700 rounded-lg overflow-hidden">
-                      <img
+                      <Image
                         src={skill.icon}
                         alt={skill.name}
                         width={40}
