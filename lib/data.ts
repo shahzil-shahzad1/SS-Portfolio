@@ -253,7 +253,7 @@ export const badges = [
 export type PageDef = {
   name: string;
   id: string;
-  component: React.ComponentType<{}>;
+  component: React.ComponentType;
 };
 
 
