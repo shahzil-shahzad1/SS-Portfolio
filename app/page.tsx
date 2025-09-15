@@ -28,7 +28,7 @@ type PageProps = {
   pageStyle?: CSSProperties;
 };
 
-type PageComponent = ForwardRefExoticComponent<
+type PageComponet = ForwardRefExoticComponent<
   PageProps & RefAttributes<HTMLDivElement>
 >;
 
