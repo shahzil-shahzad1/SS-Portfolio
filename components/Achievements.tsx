@@ -1,5 +1,6 @@
 import React from 'react'
 import { badges, certifications } from '@/lib/data';
+import Image from "next/image";
 const AchievementsPage = () => {
   return (
     <section
@@ -56,10 +57,12 @@ const AchievementsPage = () => {
                 className="flex flex-col items-center text-center"
               >
                 <div className="h-32 w-44 flex items-center justify-center bg-[#111] border border-gray-700 rounded-lg overflow-hidden">
-                  <img
-                    src={badge.icon}
-                    alt={badge.name}
-                    className="object-contain h-32 w-44"
+                  <Image
+                  src={badge.icon}
+                  alt={badge.name}
+                  width={176}   // w-44 = 44 * 4 = 176px
+                  height={128}  // h-32 = 32 * 4 = 128px
+                  className="object-contain"
                   />
                 </div>
                 <span className="mt-2 text-sm text-[#B3B3B3] break-words">
