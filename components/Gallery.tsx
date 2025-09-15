@@ -1,5 +1,6 @@
 import React from 'react'
 import { eventImages, teamImages } from '@/lib/data';
+import Image from "next/image";
 const GalleryPage = () => (
     <section
       id="gallery"
@@ -19,11 +20,13 @@ const GalleryPage = () => (
               className="overflow-hidden border border-[#0E0E0F] shadow-md hover:shadow-lg transition-all duration-200"
             >
                {/* hover:-translate-y-1 gap-6 rounded-xl  border-gray-800*/}
-              <img
-                src={src}
-                alt={`Team member ${idx + 1}`}
-                className="w-full h-36 object-cover cursor-pointer"
-              />
+                <Image
+                  src={src}
+                  alt={`Team member ${idx + 1}`}
+                  width={500} // any placeholder width
+                  height={144} // 36 * 4 = 144px to match h-36
+                  className="w-full h-36 object-cover cursor-pointer"
+                />
             </div>
           ))}
         </div>
@@ -40,11 +43,13 @@ const GalleryPage = () => (
               key={idx}
               className="overflow-hidden border border-[#0E0E0F] shadow-md hover:shadow-lg transition-all duration-200"
             >
-              <img
-                src={src}
-                alt={`Event ${idx + 1}`}
-                className="w-full h-36 object-cover"
-              />
+             <Image
+              src={src}
+                  alt={`Event ${idx + 1}`}
+              width={500}   // placeholder, will be overridden by w-full
+              height={144}  // h-36 = 144px
+              className="w-full h-36 object-cover"
+            />
             </div>
           ))}
         </div>
