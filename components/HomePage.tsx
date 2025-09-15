@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const HomePage = () => (
   <section
@@ -8,10 +9,12 @@ const HomePage = () => (
     <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between  gap-12 pt-10">
       {/* Image + role text */}
       <div className="flex flex-col justify-start items-center md:items-start gap-6 w-full md:w-1/3">
-        <img
-          src="https://placehold.co/800x800/white/[#eb4242]?text=Future"
-          alt="A person diving towards the sky"
-          className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-500 ease-in-out hover:scale-[1.03]"
+        <Image
+        src="https://placehold.co/800x800/white/[#eb4242]?text=Future"
+        alt="A person diving towards the sky"
+        width={800}
+        height={800}
+        className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-full h-full object-cover rounded-3xl shadow-2xl transition-transform duration-500 ease-in-out hover:scale-[1.03]"
         />
       </div>
 
