@@ -30,10 +30,12 @@ const AchievementsPage = () => {
                 className="flex flex-col items-center text-center"
               >
                 <div className="h-32 w-44 flex items-center justify-center bg-[#111] border border-gray-700 rounded-lg overflow-hidden">
-                  <img
-                    src={cert.icon}
-                    alt={cert.name}
-                    className="object-contain h-32 w-44"
+                  <Image
+                  src={cert.icon}
+                  alt={cert.name}
+                  width={176}   // same as w-44 (44 * 4 = 176px)
+                  height={128}  // same as h-32 (32 * 4 = 128px)
+                  className="object-contain"
                   />
                 </div>
                 <span className="mt-2 text-sm text-[#B3B3B3] break-words">
